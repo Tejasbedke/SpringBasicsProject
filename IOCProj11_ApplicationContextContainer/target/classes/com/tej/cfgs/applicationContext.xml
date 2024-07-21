@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+     <bean id="dtdc" class="com.tej.comps.DTDC" scope="prototype" lazy-init="true"/>
+     <bean id="bdart" class="com.tej.comps.BlueDart" scope="singleton"/>
+     
+     <bean id="flipkart" class="com.tej.beans.FlipKart" scope="singleton">
+     <constructor-arg name="courior" ref="dtdc"/>
+     </bean>
+
+</beans>
